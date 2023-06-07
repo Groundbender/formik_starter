@@ -57,9 +57,10 @@ const Form = () => {
         id="name"
         name="name"
         type="text"
-        value={formik.values.name}
-        onChange={formik.handleChange}
-        onBlur={formik.handleBlur}
+        // value={formik.values.name}
+        // onChange={formik.handleChange}
+        // onBlur={formik.handleBlur}
+        {...formik.getFieldProps("name")}
       />
       {formik.errors.name && formik.touched.name ? (
         <div style={{ color: "red", marginTop: "8px" }}>
